@@ -1,0 +1,3 @@
+[submodule "Serverless/serverless-kubeless"]
+	path = Serverless/serverless-kubeless
+	url = https://github.com/serverless/serverless-kubeless

@@ -52,7 +52,11 @@ It will download a ~140M ISO, work for a while then voila !
 
 #### Kubeless
 
-Create the namespace it needs first, applying the Yaml file found in Kubeless folder in this repo.
+Create the namespace it needs first.  If the first command doesn't work, applying the Yaml file found in Kubeless folder in this repo should.
+	
+	kubectl create ns kubeless
+	
+or:
 
 	kubectl create -f ./create-kubeless-namespace.yaml 
 	
@@ -65,6 +69,13 @@ Pay attention to what the installation says.  In this case it wanted the followi
 	`curl -sL https://github.com/kubeless/kubeless/releases/download/v0.2.3/kubeless-v0.2.3.yaml | kubectl create -f -`
 
 It took a few minutes before all pieces were ready, made easy to monitor with the dashboard.
+
+#### Serverless
+
+Install the plugin globally.  This connects Serverless to Kubernetes via Kubeless.
+
+	yarn global add serverless
+
 
 
 ## RoadMap
